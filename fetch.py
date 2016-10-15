@@ -38,11 +38,16 @@ for kill in json_object:
     print "KILL"
     #print "\ttype of kill is %s" % type(kill)
     print "\t %s" % kill['killID']
-    # for thing in kill:
-    #    print "type of thing is %s" % type(thing)
     f = json.dumps(kill)
-    res = es.index(index="fitstat_v1", doc_type='kill', id=kill['killID'], body=f)
-    print(res['created'])
-    
+    # res = es.search(index="fitstat_v1", id=kill['killID'])
+    res = es.get(index="fitstat_v1", doc_type='kill', id=kill['killID'])
+    print(res['found'])
+    # pp.pprint(res)
+    if res['found'] == 'False':
+        print "hits zero , inserting"
+        #res = es.index(index="fitstat_v1", doc_type='kill', id=kill['killID'], body=f)
+        #print(res['created'])
+    else:
+        print "Hits > 0 skipping"
 
 

@@ -1,0 +1,151 @@
+{
+    "fitstat_v1": {
+        "mappings": {
+            "kill": {
+                "properties": {
+                    "attackers": {
+                        "type": "nested",
+                        "properties": {
+                            "allianceID": {
+                                "type": "long"
+                            },
+                            "allianceName": {
+                                "type": "string"
+                            },
+                            "characterID": {
+                                "type": "long"
+                            },
+                            "characterName": {
+                                "type": "string"
+                            },
+                            "corporationID": {
+                                "type": "long"
+                            },
+                            "corporationName": {
+                                "type": "string"
+                            },
+                            "damageDone": {
+                                "type": "long"
+                            },
+                            "factionID": {
+                                "type": "long"
+                            },
+                            "factionName": {
+                                "type": "string"
+                            },
+                            "finalBlow": {
+                                "type": "long"
+                            },
+                            "securityStatus": {
+                                "type": "double"
+                            },
+                            "shipTypeID": {
+                                "type": "long"
+                            },
+                            "weaponTypeID": {
+                                "type": "long"
+                            }
+                        }
+                    },
+                    "items": {
+                        "type": "nested",
+                        "properties": {
+                            "flag": {
+                                "type": "long"
+                            },
+                            "qtyDestroyed": {
+                                "type": "long"
+                            },
+                            "qtyDropped": {
+                                "type": "long"
+                            },
+                            "singleton": {
+                                "type": "long"
+                            },
+                            "typeID": {
+                                "type": "long"
+                            }
+                        }
+                    },
+                    "killID": {
+                        "type": "long"
+                    },
+                    "killTime": {
+                        "type": "string"
+                    },
+                    "moonID": {
+                        "type": "long"
+                    },
+                    "position": {
+                        "type": "nested",
+                        "properties": {
+                            "x": {
+                                "type": "double"
+                            },
+                            "y": {
+                                "type": "double"
+                            },
+                            "z": {
+                                "type": "double"
+                            }
+                        }
+                    },
+                    "solarSystemID": {
+                        "type": "long"
+                    },
+                    "victim": {
+                        "type": "nested",
+                        "properties": {
+                            "allianceID": {
+                                "type": "long"
+                            },
+                            "allianceName": {
+                                "type": "string"
+                            },
+                            "characterID": {
+                                "type": "long"
+                            },
+                            "characterName": {
+                                "type": "string"
+                            },
+                            "corporationID": {
+                                "type": "long"
+                            },
+                            "corporationName": {
+                                "type": "string"
+                            },
+                            "damageTaken": {
+                                "type": "long"
+                            },
+                            "factionID": {
+                                "type": "long"
+                            },
+                            "factionName": {
+                                "type": "string"
+                            },
+                            "shipTypeID": {
+                                "type": "long"
+                            }
+                        }
+                    },
+                    "zkb": {
+                        "properties": {
+                            "hash": {
+                                "type": "string"
+                            },
+                            "locationID": {
+                                "type": "long"
+                            },
+                            "points": {
+                                "type": "long"
+                            },
+                            "totalValue": {
+                                "type": "double"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
